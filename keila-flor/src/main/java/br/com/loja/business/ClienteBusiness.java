@@ -2,15 +2,17 @@ package br.com.loja.business;
 
 import java.util.List;
 
+import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 
 import br.com.loja.dao.ClienteDao;
 import br.com.loja.entity.Cliente;
 
+@ApplicationScoped
 public class ClienteBusiness {
 	
 	@Inject
-	ClienteDao clienteDao;
+	private ClienteDao clienteDao;
 
 	public void criarCliente(Cliente cliente) {
 		clienteDao.create(cliente);

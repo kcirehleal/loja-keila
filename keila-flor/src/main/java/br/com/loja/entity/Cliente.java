@@ -16,6 +16,8 @@ public class Cliente {
 	@Column(nullable = false)
 	private String nome;
 	
+	private String cpf;
+	
 	private Integer idade;
 	
 	private String endereco;
@@ -34,6 +36,14 @@ public class Cliente {
 
 	public void setNome(String nome) {
 		this.nome = nome;
+	}
+	
+	public String getCpf() {
+		return cpf;
+	}
+
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
 	}
 
 	public Integer getIdade() {

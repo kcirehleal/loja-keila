@@ -1,13 +1,16 @@
 package br.com.loja.entity;
 
 import java.math.BigDecimal;
-import java.util.Date;
+import java.time.LocalDateTime;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Compra {
@@ -17,19 +20,19 @@ public class Compra {
 	private Long id;
 	
 	@Column(nullable = false)
-	private Date data;
+	private LocalDateTime data;
 	
-//	@ManyToMany
-//	private Produto produto;
+	@OneToMany
+	private List<ItemCompra> ItemCompra;
 	
 	@Column(nullable = false)
 	private Integer parcelas;
 	
 	@Column(nullable = false)
-	private BigDecimal valor;
+	private BigDecimal valorTotal;
 	
-//	@ManyToOne
-//	private Cliente cliente;
+	@ManyToOne
+	private Cliente cliente;
 
 	public Long getId() {
 		return id;
@@ -39,21 +42,21 @@ public class Compra {
 		this.id = id;
 	}
 
-	public Date getData() {
+	public LocalDateTime getData() {
 		return data;
 	}
 
-	public void setData(Date data) {
+	public void LocalDateTime(LocalDateTime data) {
 		this.data = data;
 	}
 
-//	public Produto getProduto() {
-//		return produto;
-//	}
-//
-//	public void setProduto(Produto produto) {
-//		this.produto = produto;
-//	}
+	public List<ItemCompra> getItemCompra() {
+		return ItemCompra;
+	}
+
+	public void setItemCompra(List<ItemCompra> itemCompra) {
+		ItemCompra = itemCompra;
+	}
 
 	public Integer getParcelas() {
 		return parcelas;
@@ -63,21 +66,20 @@ public class Compra {
 		this.parcelas = parcelas;
 	}
 
-	public BigDecimal getValor() {
-		return valor;
+	public BigDecimal getValorTotal() {
+		return valorTotal;
 	}
 
-	public void setValor(BigDecimal valor) {
-		this.valor = valor;
+	public void setValorTotal(BigDecimal valorTotal) {
+		this.valorTotal = valorTotal;
 	}
 
-//	public Cliente getCliente() {
-//		return cliente;
-//	}
-//
-//	public void setCliente(Cliente cliente) {
-//		this.cliente = cliente;
-//	}
-	
+	public Cliente getCliente() {
+		return cliente;
+	}
+
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
+	}
 	
 }

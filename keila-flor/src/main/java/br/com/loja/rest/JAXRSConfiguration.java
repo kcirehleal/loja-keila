@@ -1,4 +1,4 @@
-package br.com.loja;
+package br.com.loja.rest;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;

@@ -12,6 +12,7 @@
 		
 		<class>br.com.loja.entity.Cliente</class>  
         <class>br.com.loja.entity.Compra</class>    
+        <class>br.com.loja.entity.ItemCompra</class>
 		<class>br.com.loja.entity.Produto</class> 
 		
         <properties>		
