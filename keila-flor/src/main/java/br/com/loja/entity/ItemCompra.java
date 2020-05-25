@@ -1,7 +1,5 @@
 package br.com.loja.entity;
 
-import java.math.BigDecimal;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -20,7 +18,7 @@ public class ItemCompra {
 	
 	private Integer quantidade;
 	
-	private BigDecimal valorItemCompra;
+	private Double valorItemCompra;
 
 	public Long getId() {
 		return id;
@@ -46,14 +44,12 @@ public class ItemCompra {
 		this.quantidade = quantidade;
 	}
 
-	public BigDecimal getValorItemCompra() {
+	public Double getValorItemCompra() {
 		return valorItemCompra;
 	}
 
-	public void setValorItemCompra(BigDecimal valorItemCompra) {
+	public void setValorItemCompra(Double valorItemCompra) {
 		this.valorItemCompra = valorItemCompra;
 	}
-	
-	
-	
+
 }

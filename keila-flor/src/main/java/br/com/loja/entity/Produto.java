@@ -1,7 +1,5 @@
 package br.com.loja.entity;
 
-import java.math.BigDecimal;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -19,7 +17,7 @@ public class Produto {
 	private String nome;
 	
 	@Column(nullable = false)
-	private BigDecimal preco;
+	private Double preco;
 
 	public Long getId() {
 		return id;
@@ -37,11 +35,11 @@ public class Produto {
 		this.nome = nome;
 	}
 
-	public BigDecimal getPreco() {
+	public Double getPreco() {
 		return preco;
 	}
 
-	public void setPreco(BigDecimal preco) {
+	public void setPreco(Double preco) {
 		this.preco = preco;
 	}
 	
